@@ -1,0 +1,93 @@
+<!--
+ <p>nav-bar works!</p>
+-->
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <button mat-icon-button class="example-icon" (click)="changeEvent()">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <app-logo></app-logo>
+
+  <span class="example-spacer"></span>
+
+
+
+  <form class="searchBox">
+    <div class="example-button-row">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Search">
+      </mat-form-field>
+      <button mat-button>
+        <mat-icon>search</mat-icon>
+      </button>
+    </div>
+  </form>
+
+
+ <!--
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon style=" margin-right: 40px;" aria-hidden="false" aria-label="video_call">video_call</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>
+      <mat-icon>live_tv</mat-icon>
+      <span>Upload Video</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>rss_feed</mat-icon>
+      <span>Live</span>
+    </button>
+  </mat-menu>
+ -->
+
+
+  <button mat-icon-button [matMenuTriggerFor]="menu123" aria-label="Example icon-button with a menu">
+    <mat-icon style=" margin-right: 40px;" aria-hidden="false" aria-label="view_comfy">view_comfy</mat-icon>
+  </button>
+  <mat-menu #menu123="matMenu">
+    <button mat-menu-item>
+      <mat-icon>comment</mat-icon>
+      <span>Comment</span>
+    </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="menu123456" aria-label="Example icon-button with a menu">
+    <mat-icon style=" margin-right: 40px;" aria-hidden="false" aria-label="notifications_none">notifications_none
+    </mat-icon>
+  </button>
+  <mat-menu #menu123456="matMenu">
+    <button mat-menu-item>
+      <mat-icon>verified</mat-icon>
+      <span>Admin</span>
+    </button>
+    <button mat-menu-item>
+      <mat-icon>shop</mat-icon>
+      <span>Notification</span>
+    </button>
+  </mat-menu>
+
+  <img [matMenuTriggerFor]="menu0"
+       style="width: 50px; height: 50px; border-radius: 50%;">
+
+
+  <!--
+  <div >
+    <button mat-button > KENIT Login</button>
+  </div>
+  -->
+
+  <mat-menu #menu0="matMenu">
+
+
+
+  <button mat-menu-item >
+    <mat-icon>verified</mat-icon>
+    <span><!-- <h5  style="font-size: medium;"> --> USERNAME <!-- </h5> --></span>
+  </button>
+  <button mat-menu-item (click)="signout()">
+    <mat-icon>exit_to_app</mat-icon>
+    <span>Logout</span>
+  </button>
+  </mat-menu>
+
+</mat-toolbar>

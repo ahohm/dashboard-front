@@ -1,0 +1,16 @@
+<!-- <p>dashboard works!</p>
+ -->
+
+<app-nav-bar (changeState)="changeState($event)"></app-nav-bar>
+<mat-sidenav-container>
+  <mat-sidenav-content>
+
+      <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <div style="width: 300px">
+      <app-side-bar></app-side-bar>
+    </div>
+  </mat-sidenav>
+</mat-sidenav-container>

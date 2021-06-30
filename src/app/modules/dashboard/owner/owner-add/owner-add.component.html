@@ -1,0 +1,31 @@
+<!--<p>owner-add works!</p>
+-->
+  <mat-card >
+    <mat-card-header>
+      <mat-card-subtitle>Add Lock Owner</mat-card-subtitle>
+    </mat-card-header>
+
+    <form class="example-form"#f="ngForm" (ngSubmit)="f.form.valid && onSubmit(f)">
+      <mat-card-content>
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Username" name="username"
+                 id="username"
+                 ngModel
+                 required
+                 #username="ngModel">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" name="email"
+                 id="email"
+                 ngModel
+                 required
+                 placeholder="email"
+                 #email="ngModel">
+        </mat-form-field>
+      </mat-card-content>
+      <button mat-stroked-button color="primary" class="btn-block" type="submit"><mat-icon>add_circle_outline</mat-icon>
+        Save</button>
+    </form>
+  </mat-card>
+
